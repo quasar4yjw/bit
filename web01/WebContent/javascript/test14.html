@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 복합 할당 연산자 </title>
+</head>
+
+
+<body>
+<script>
+"use strict"
+
+var a = 0
+var b = 100;
+
+a += b;
+console.log(a);
+
+a = 0;
+a -= b;
+console.log(a);
+
+
+
+var r = 0;
+var a = 10;
+
+r = a++;
+console.log(r, a);
+
+r = 0, a = 10;
+
+a= 10;
+a = a++;
+
+console.log(a);
+
+var a=10, r=0; 
+r= 0;
+r = a++ + a++ + a++;
+a = a++ + a++;
+console.log(r,a)
+
+</script>
+
+
+</body>
+</html>
