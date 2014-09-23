@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>closure 클로저3</title>
+
+</head>
+<body>
+
+<script>
+"use strict"; 
+
+var score = [100, 90, 80, 70, 80]
+
+
+
+var sum = 0;
+for (i=0; i<5; i++){
+  sum += score[i] 
+}
+console.log("메롱=", sum);
+
+
+
+// 문제: 5개 과목의 성적합계를 구하시오!
+//클로저 사용 전
+var sum = 0;
+for (var i in score){
+	sum += score[i]	
+}
+console.log(sum);
+
+
+
+
+
+
+
+
+
+//클로저 사용 후
+
+function each(arr, func){
+	for (var i in arr){
+//	console.log("i=", i);
+		func(i, arr[i]);
+	}
+}
+
+
+
+var result2 = 0;
+
+each(score, function(index, value){
+	result2 += value;
+});
+
+console.log("result2 =", result2);
+
+
+</script>
+
+<script>
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
