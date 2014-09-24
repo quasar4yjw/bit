@@ -9,7 +9,10 @@
 <input id="input1" type="text"" onkeypress="return runScript(event)""> <br>
 <input id="input2" type="text" > <br>
 <script>
+
+
 "use strict"; 
+/*
 var input33 ="okok";
 function runScript(e) {
     if (e.keyCode == 13) {
@@ -18,9 +21,9 @@ function runScript(e) {
         return false;
     }
 }
+*/
 
 
-/*
 document.getElementById('input1').onkeyup = function(event){
 	console.log(event.constructor);
 	console.log(event.key); // DOM LV3
@@ -38,7 +41,7 @@ document.getElementById('input1').onkeyup = function(event){
 		input2.select()
 	}
 }
- */
+
  // change 이벤트: 포커스를 잃었을 때, 기존 값과 다르면 이벤트 발생.
  
  document.getElementById('input1').onchange = function(event){
