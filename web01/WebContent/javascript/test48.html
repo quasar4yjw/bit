@@ -40,9 +40,9 @@ console.log(str1); // 불변
 // split() => 특정 구분자로 문자열을 나눈다. 리턴 값은 배열.
 var str4 = "http://test.com/board/list?pageno=0&page=3&count=10";
 
+console.log('========================!!');
 
 
-/*
 var splitStrArr1 = str4.split('?');
 
 var splitStr1 = splitStrArr1[1];
@@ -52,13 +52,17 @@ var splitStrArr2 = splitStr1.split('&');
 	var splitStr2 = "";
 	for (var i in splitStrArr2) {
 		splitStr2 = splitStr2 + splitStrArr2[i];
+		console.log("aa" + splitStr2)
 	}
 
 var splitStrArr3 = splitStr2.split('=');
 console.log(splitStrArr3[0]+" : "+splitStrArr3[1]);
 console.log(splitStrArr3[2]+" : "+splitStrArr3[3]);
 console.log(splitStrArr3[4]+" : "+splitStrArr3[5]);
-*/
+
+
+
+console.log('========================!!');
 var arr1 = str4.split('?')[1].split('&');
 //var arr2 = arr1[1].split('&');
 for (var i in arr1){
