@@ -63,6 +63,7 @@ console.log(arr1);
 console.log(arr1.sort()); // 항목을 문자열로 취급하여 정렬 
 
 
+/*
 function mySort(v1, v2){
 	if (v1 < v2) return -1; // 음수 리턴
 	else if (v1 == v2) return 0; // 0 리턴
@@ -70,7 +71,7 @@ function mySort(v1, v2){
 		// return (v1 >= v2) ? true : false; // 조건 연산자
 }
 console.log(arr1.sort(mySort));
-
+*/
 
 
 
@@ -89,6 +90,16 @@ console.log(n2.constructor.constructor.constructor);
 if (n2.constructor.constructor.constructor == Function) {
     console.log('true');
   }
+  
+ // for Each(콜백함수) : 배열을 반복하면서 콜백함수를 호출한다.
+ // 콜백함수(값, 인덱스, 배열)
+ 
+ console.log("-------------------");
+ arr1.forEach(function(value3){
+	 // console.log(arguments[0], arguments[1], arguments[2])
+	 console.log(value3);
+ });
+ 
 </script>
 
 </body>

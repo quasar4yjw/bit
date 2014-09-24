@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리</title>
+</head>
+
+<body>
+<input id="input1" type="text"" onkeypress="return runScript(event)""> <br>
+<input id="input2" type="text" > <br>
+<script>
+"use strict"; 
+var input33 ="okok";
+function runScript(e) {
+    if (e.keyCode == 13) {
+        document.getElementById("input1");
+        input2.select();
+        return false;
+    }
+}
+
+
+/*
+document.getElementById('input1').onkeyup = function(event){
+	console.log(event.constructor);
+	console.log(event.key); // DOM LV3
+	console.log(event.code); // DOM LV3
+	console.log(event.char); // onley IE
+	console.log(event.charCode); // depre
+	console.log(event.keyCode); // deprecated
+	console.log(event.which); //depre
+	if (event.keyCode == 13) {
+		//포커스를 input2로 옮긴다.
+		// this => 이벤트가 발생된 객체. input1
+		// this.blur(); 이벤트를 잃어라
+		//document.getElementById('input2').focus();
+		// 브라우저야, input2 태그에 포커스를 줘라.
+		input2.select()
+	}
+}
+ */
+ // change 이벤트: 포커스를 잃었을 때, 기존 값과 다르면 이벤트 발생.
+ 
+ document.getElementById('input1').onchange = function(event){
+	 console.log(event.constructor);
+ }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
