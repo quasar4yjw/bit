@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+<style>
+form th{
+text-align : right
+}
+</style>
+</head>
+<body>
+<h1>게시판 목록</h1>
+<table border='1'>
+<tr>
+<th>번호</th>
+<th>제목</th>
+<th>작성자</th>
+<th>등록일</th>
+<th>조회수</th>
+</tr>
+
+<tr>
+<td>3</td>
+<td>aaaaaa</td>
+<td>홍길동</td>
+<td>2014-1-1</td>
+<td>7</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>aaaaaa</td>
+<td>꺽정이</td>
+<td>2014-1-1</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>aaaaaa</td>
+<td>보고</td>
+<td>2014-1-1</td>
+<td>10</td>
+</tr>
+</table>
+<hr>
+<h2>게시물 상세정보</h2>
+<form>
+<table>
+
+<tr>
+<th>제목</th>
+<td><input id=title type=text></td>
+</tr>
+
+<tr>
+<th>내용</th>
+<td><textarea id=content></textarea></td>
+</tr>
+
+<tr>
+<th>작성자</th>
+<td><input id=writer type=text></td>
+</tr>
+
+<tr>
+<th>암호</th>
+<td><input id=password type=password></td>
+</tr>
+</table>
+<button id=btnAdd type=button>추가</button>
+<button id=btnCancel type=reset>취소</button>
+</form>
+<script>
+function Board(title, content, writer, password) {
+	this.title = title;
+	this.content = content;
+	this.writer = writer;
+	this.password = password;
+	this.date = new Date();
+	this.count = 0;
+	
+} //객체 생성자 함수 정의
+
+function resetForm(){
+	var event = new MouseEvent('click',{
+		'view' : window,
+		'bubbles' : true,
+		'cancleable' :true
+	});
+	
+	document.getElementById('btnCancel').dispatchEvent(event);
+} //이벤트넘기기 함수 선언
+
+var boardList = []; //배열선언
+
+document.getElementById('btnAdd').onclick = function(event){
+	var board = new Board(
+		document.getElementById('title').value,
+		document.getElementById('content').value,
+		document.getElementById('writer').value,
+		document.getElementById('password').value
+	); //이벤트시 객체생성 아규먼트 넘기기	
+	
+	boardList.push(board);
+	
+	resetForm();
+	
+	boardOutPut();
+	
+}; //온클릭시 이벤트콜백생성
+
+function boardOutPut(){
+	console.log('-----------------------------');
+	for (var i in boardList){
+		console.log(boardList[i].title,
+				boardList[i].content,
+				boardList[i].writer,
+				boardList[i].password);
+		
+	}
+	
+} //아웃풋 함수 선언
+</script>
+
+
+
+</body>
+
+</html>
