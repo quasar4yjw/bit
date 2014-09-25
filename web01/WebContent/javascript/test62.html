@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>리스너 등록: addEventListenr() / removeEventListener</title>
+<title>캡쳐 단계에 리스너 등록</title>
 <style>
 div{
    border: 1px solid red;
@@ -42,33 +42,18 @@ span {
 // targetting phase 또는 bubbling phase에서 호출됨
 // capturing 단계에서 호출되게 하려면, =>
 // => addEventListener() 함수를 사용해 리스너를 등록한다.
-document.getElementById('d1').onclick = function(event){
+document.getElementById('d1').addEventListener('click', function(event){
 	console.log('d1....');
-}
-document.getElementById('d11').onclick = function(event){
-	  console.log('d11....');
-}
-document.getElementById('d12').onclick = function(event){
-	  console.log('d12....');
-}
-document.getElementById('d2').onclick = function(event){
-    console.log('d2....');
-}
-document.getElementById('d21').onclick = function(event){
-    console.log('d21....');
-}
-document.getElementById('d22').onclick = function(event){
-    console.log('d22....');
-}
-document.getElementById('d2').onclick = function(event){
-    console.log('d3....');
-}
-document.getElementById('p1').onclick = function(event){
-    console.log('ppppppp1....');
-}
-document.getElementById('p2').onclick = function(event){
-    console.log('ppppppp2....');
-}
+}, true); // 
+document.getElementById('d11').addEventListener('click', function(event){
+console.log('d11....');
+}, true);
+document.getElementById('s1').addEventListener('click', function(event){
+console.log('sssssssssss1....');
+});
+
+
+/*
 document.getElementById('s1').onclick = function(event){
     console.log('qwers111111111....');
    // event.stopPropagation(); //부모로 버블하지 말라!
@@ -77,22 +62,15 @@ document.getElementById('s1').onclick = function(event){
 
 //리스너를 등록한 순서대로 호출
 var e1 = document.getElementById('s1');
-var e2 = document.getElementById('s1');
 e1.addEventListener('click', function(event){
 	  console.log('(1)=>s1111111');
 	});
-e2.onclick = function(event) {
-    console.log('(2) eEeEeEE');
-}
+
 e1.onclick = function(event) {
 	console.log('(2) s1111111');
-}
-	e2.onclick = function(event) {
-	    console.log('(2) DDDDD');
-}
 	//event.stopPropagation();
 	//event.stopImmediatePropagation(); // 즉시 이벤트 전달 멈춰라
-
+}
 
 e1.addEventListener('click', function(event){
 	  console.log('(3)=>s1111111');
@@ -110,7 +88,7 @@ e1.attachEvent('onclick', function(){
 document.getElementById('s2').onclick = function(event){
     console.log('s222222222....');
 }
-
+*/
 
 </script>
 
