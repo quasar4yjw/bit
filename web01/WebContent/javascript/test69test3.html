@@ -11,7 +11,7 @@ form th{
 </head>
 <body>
 <h1>게시판 목록</h1>
-<table border='1'>
+<table id='boardTable' border='1'>
 <tr>
 <th>번호</th>
 <th>제목</th>
@@ -20,29 +20,6 @@ form th{
 <th>조회수</th>
 </tr>
 
-<tr>
-<td>3</td>
-<td>aaa</td>
-<td>길동이</td>
-<td>2014-1-1</td>
-<td>3</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>aaa</td>
-<td>길동이</td>
-<td>2014-1-1</td>
-<td>3</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>aaa</td>
-<td>길동이</td>
-<td>2014-1-1</td>
-<td>3</td>
-</tr>
 </table>
 <hr>
 <h2>게시물 상세정보</h2>
@@ -79,6 +56,12 @@ form th{
 
 
 <script>
+
+//목표: UI 컴포넌트에게 이벤트 전달
+// dispatchEvent() 소개
+//목표: DOM API 사용하여 TR 태그 삭제
+// 목표: 제목에 링크(<a>태그 추가) 추가
+// <a>에 게시물 번호를 속성으로 추가하기
 function Board(title, content, writer, password){
 	this.title = title;
 	this.content = content;
@@ -93,9 +76,9 @@ function Board(title, content, writer, password){
 
 function resetForm(){
 	var event = new MouseEvent('click',{
-	'view' : window,
-	'bubbles' : true,
-	'cancelable' : true
+	//'view' : window,
+	//'bubbles' : true,
+	//'cancelable' : true
 	});
 	document.getElementById('btnCancel').dispatchEvent(event);
 }
@@ -110,20 +93,82 @@ document.getElementById('btnAdd').onclick = function(event){
 	);
 	boardList.push(board);
 	resetForm();
-	outputBoardList();
+	refreshBoardList();
 	
 };
 
-function outputBoardList(){
+function refreshBoardList(){
+	var boardTable = document.getElementById('boardTable');
+	// var tbody = boardTable.children[0]; // <tbody>
+	 var tbody = boardTable.firstElementChild;
+	//var tbody = boardTable.firstChild;
+	
+	for (var i = tbody.children.length -1; i > 0; i--){
+		//console.log(tbody.children[i]);
+		
+		//console.log(boardTable.children[i]);
+		tbody.removeChild(tbody.children[i]);
+	}
+	
+ 
+	
+	var tr = null;
+	var td = null;
+	var text = null;
 	console.log('------------------------');
 	for (var i in boardList){
-		console.log(boardList[i].title),
-		console.log(boardList[i].content),
-		console.log(boardList[i].writer),
-		console.log(boardList[i].password),
-		console.log(boardList[i].date),
-		console.log(boardList[i].count)
-	}
+		tr = document.createElement('tr');
+
+		td = document.createElement('td');
+		text = document.createTextNode(i);
+		td.appendChild(text);
+		tr.appendChild(td);
+		
+		
+		td = document.createElement('td');
+		a = document.createElement('a');
+		a.href = '#';
+		a.setAttribute('bno', new String(i));
+		a.onclick = loadBoardDetail;
+		
+		text = document.createTextNode(boardList[i].title);
+		a.appendChild(text)
+		td.appendChild(a);
+		tr.appendChild(td);
+		
+	  td = document.createElement('td');
+	  text = document.createTextNode(boardList[i].writer);
+	  td.appendChild(text);
+	  tr.appendChild(td);
+		
+	  td = document.createElement('td');
+	  text = document.createTextNode(
+			  toYYYYMMDD(boardList[i].date));
+	  td.appendChild(text);
+	  tr.appendChild(td);
+	  
+	  td = document.createElement('td');
+	  text = document.createTextNode(boardList[i].count);
+	  td.appendChild(text);
+	  tr.appendChild(td);
+	    
+	
+		
+		tbody.appendChild(tr);
+	} 	
+}
+
+function loadBoardDetail(event) {
+	// 원래 하던 기능 하지마
+	event.preventDefault();
+	alert(this.getAttribute('bno') + '를 눌렀음');
+}
+
+
+function toYYYYMMDD(date) {
+	return result = date.getFullYear() + '-' + 
+	(date.getMonth() + 1) + '-' +
+	date.getDate();
 	
 	
 }
