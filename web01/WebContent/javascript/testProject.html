@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <link rel="stylesheet">
+  <style>
+
+  
+  
+  /* Elegant Aero */
+.elegant-aero {
+    margin-left:auto;
+    margin-right:auto;
+
+    max-width: 500px;
+    background: #D2E9FF;
+    padding: 20px 20px 20px 20px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+}
+.elegant-aero h1 {
+    font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 10px 10px 10px 20px;
+    display: block;
+    background: #C0E1FF;
+    border-bottom: 1px solid #B8DDFF;
+    margin: -20px -20px 15px;
+}
+.elegant-aero h1>span {
+    display: block;
+    font-size: 11px;
+}
+
+.elegant-aero label>span {
+    float: left;
+    margin-top: 10px;
+    color: #5E5E5E;
+}
+.elegant-aero label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+.elegant-aero label>span {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.elegant-aero input[type="text"], .elegant-aero input[type="email"], .elegant-aero textarea, .elegant-aero select {
+    color: #888;
+    width: 70%;
+    padding: 0px 0px 0px 5px;
+    border: 1px solid #C5E2FF;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow:inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 12px/25px Arial, Helvetica, sans-serif;
+    height: 30px;
+    line-height:15px;
+    margin: 2px 6px 16px 0px;
+}
+.elegant-aero textarea{
+    height:100px;
+    padding: 5px 0px 0px 5px;
+    width: 70%;
+}
+.elegant-aero select {
+    background: #fbfbfb url('down-arrow.png') no-repeat right;
+    background: #fbfbfb url('down-arrow.png') no-repeat right;
+   appearance:none;
+    -webkit-appearance:none; 
+   -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+}
+.elegant-aero .button{
+    padding: 10px 30px 10px 30px;
+    background: #66C1E4;
+    border: none;
+    color: #FFF;
+    box-shadow: 1px 1px 1px #4C6E91;
+    -webkit-box-shadow: 1px 1px 1px #4C6E91;
+    -moz-box-shadow: 1px 1px 1px #4C6E91;
+    text-shadow: 1px 1px 1px #5079A3;
+    
+}
+.elegant-aero .button:hover{
+    background: #3EB1DD;
+}
+  
+  
+  
+  
+  </style>
+
+</head>
+<body><form>
+<div id=btnAdd>
+  <button class=elegant-aero type=button>메모작성</button></div>
+  <div id=desktop></div>
+  
+  <!-- //<input readonly=readonly type=text value="11">
+   // <input type=text disabled=disabled value="22"> -->
+
+ 
+   
+   <script>
+  
+  $('#btnAdd').click(function(){
+	var i = Math.random();  
+   $('<div>').appendTo($('#desktop'))
+                  .append($('<table>')
+                  .attr('class', 'elegant-aero')
+                  .attr('id', $("#draggable4")).draggable()
+                  .append($('<form>')
+                  .append($('<input>').attr('class', 'elegant-aero')
+                		  .attr('type', 'text').attr('id', new String(i+1)))
+                  
+                  .append($('<input>').attr('class', 'elegant-aero')
+                		  .attr('type', 'checkbox').attr('id', new String(i+11))
+                		  .click(function(){
+                			  if ($('#(i+11)').attr('checked')=='checked')
+                				 $('#(i+1)').attr('disabled', 'disabled')  
+                		  }))
+                  
+                  .append($('<input>').attr('class', 'elegant-aero')
+                		  .attr('type', 'text').attr('id', new String(i+2)))
+                  
+                  .append($('<input>').attr('class', 'elegant-aero')
+                		  .attr('type', 'checkbox').attr('id', new String(i+22)))
+                  
+                  .append($('<input>').attr('class', 'elegant-aero')
+                		  .attr('type', 'text').attr('id', new String(i+3)))
+                  
+                  .append($('<input>').attr('class', 'elegant-aero')
+                		  .attr('type', 'checkbox').attr('id', new String(i+33)))))
+            
+                                        
+  });</script>
+</body>
+</html>

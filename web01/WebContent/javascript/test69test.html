@@ -11,7 +11,7 @@
 
 <!-- 게시판 목록 -->
 <h1>게시판 목록</h1>
-<table border='1'>
+<table border='1' id=boardTable>
 <tr>
   <th>번호</th>
   <th>제목</th>
@@ -20,18 +20,53 @@
   <th>조회수</th>
 </tr>
 <tr>
-  <td>3</td>
+  <td>8</td>
   <td>aaaaaa</td>
   <td>홍길동</td>
   <td>2014-1-1</td>
   <td>7</td>
 </tr>
 <tr>
-  <td>2</td>
+  <td>7</td>
   <td>aaaaaa</td>
   <td>홍길동</td>
   <td>2014-1-1</td>
   <td>8</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>aaaaaa</td>
+  <td>홍길동</td>
+  <td>2014-1-1</td>
+  <td>11</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>aaaaaa</td>
+  <td>홍길동</td>
+  <td>2014-1-1</td>
+  <td>7</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>aaaaaa</td>
+  <td>홍길동</td>
+  <td>2014-1-1</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>aaaaaa</td>
+  <td>홍길동</td>
+  <td>2014-1-1</td>
+  <td>11</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>aaaaaa</td>
+  <td>홍길동</td>
+  <td>2014-1-1</td>
+  <td>11</td>
 </tr>
 <tr>
   <td>1</td>
@@ -116,18 +151,17 @@ document.getElementById('btnAdd').onclick = function(event) {
      outputBoardList();
 };
 
-function outputBoardList(){
-	console.log('------------------');
-	for(var i in boardList){
-		console.log(boardList[i].title,
-				boardList[i].content,
-				boardList[i].writer,
-				boardList[i].password,
-				boardList[i].date,
-				boardList[i].count
-		)
-		
-	}
+function outputBoardList()
+	
+	 {
+		  var boardTable = document.getElementById('boardTable');
+		  //var tbody = boardTable.children[0]; // <tbody>
+		  var tbody = boardTable.firstElementChild; // <tbody>
+		  for (var i = 0; i < tbody.children.length; i++) {
+		    //console.log(tbody.children[i]);
+		    tbody.removeChild(tbody.children[i]);
+		  }
+	
 }
 </script>
 </body>
