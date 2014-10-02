@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selector</title>
+
+<script src='jquery-1.11.1.js'></script>
+<script>
+
+/*
+ 1. 태그 이름으로 대상 선택하기
+ $(CSS 셀렉터 문법) => 
+ => 리턴 : jQuery 함수가 만든 배열, 
+ 배열 안에 엘리먼트가 들어있다.
+ => CSS 셀렉터 문법: #아이디, 태그명, .클래스명, xxx:슈도셀렉터 등
+ 
+ 
+ 
+ 
+ 
+ */
+
+ 
+ 
+	$(function() {
+		$('h1').each(function(index, element){
+			console.log(index, element);
+			
+		});
+	});
+ 
+ 
+  $(function() {
+	    $('<h1>').each(function(e,a){
+	      console.log($('<h1>'));
+	      
+	    });
+	  }); 
+</script>
+</head>
+<body>
+	<h1>제목11111111111111</h1>
+	<p>내용..............</p>
+
+	<h1>제목111111122222</h1>
+	<p>내용..............</p>
+
+	<h1>제목111111133333333</h1>
+	<p>내용..............</p>
+
+	<h1>제목1111144444444444</h1>
+	<p>내용..............</p>
+
+	<h1>제목111111555555555</h1>
+	<p>내용..............</p>
+</body>
+</html>

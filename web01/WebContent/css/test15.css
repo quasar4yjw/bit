@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+#image1 {
+	position: absolute;
+	top:30px;
+	right: 0px;
+	
+}
+
+
+.alertWindow {
+	 position: fixed;
+	 top:0px;
+	 left:400px;
+}

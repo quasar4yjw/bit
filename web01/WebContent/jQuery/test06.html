@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>load 이벤트</title>
+
+<script src='jquery-1.11.1.js'></script>
+<script>
+ $(document).ready(function(){
+    
+    alert("1111");
+    
+  });
+ 
+ //ready 축약
+ $(function(){
+	 alert('22222');
+ });
+ 
+ $(document).ready(function(){
+	    
+	    alert("3333333333333");
+	    
+	  });
+ 
+ $(function(){
+	   alert('4444');
+	 });
+</script>
+</head>
+<body>
+
+	<button id='btn1'>버튼1</button>
+
+	<div id='formDiv' style='display: none;'>
+		<form>
+			이름: <input type='text' name='name'><br> 나이: <input
+				type='text' name='age'><br>
+
+
+
+		</form>
+		<script>
+
+		</script>
+
+	</div>
+
+</body>
+</html>
