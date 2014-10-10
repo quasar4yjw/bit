@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hover()</title>
+
+<script src='jquery-1.11.1.js'></script>
+<script>
+
+ // * hover() => mouseenter, mouseleave 이벤트 리스너 등록 단축 함수
+ 
+ 
+	// on() => 이벤트 리스너 등록. 
+  // $().on(이벤트명, 셀렉터, 함수); // 예전의 live()와 같다.
+  // => 현재 존재하는 태그뿐만 아니라 앞으로 생성될 태그에도
+  // 적용한다.
+  
+  //off() => 이벤트 리스너 해제
+  // $().off(이벤트명, [셀렉터], [함수]);
+
+  
+
+
+	
+	$(function() {
+    /*    $('#ref').hover(function(event){
+    	 console.log("마우스 올라옴")
+    	 //$(this).css('border', '22px solid royalblue');
+    	 $('#btnClose').css('display', '');
+    	
+     }, function(event){
+    	 console.log("마우스 내려감")
+    	 $(this).css('border', '');
+    	 $('#btnClose').css('display', 'none');
+     });  */
+     
+      $('#ref').mouseenter(function(event){
+    	 console.log("mouse enter");
+     }).mouseleave(function(event){
+    	 console.log("mouse leave");
+     }) 
+     
+		    $('#ref').mouseover(function(event){
+	       console.log("mouse O");
+	     }).mouseout(function(event){
+	       console.log("mouse V");
+	     })  
+       $('#img1').mouseover(function(event){
+    	   event.stopPropagation();
+       }).mouseout(function(event){
+    	   event.stopPropagation();
+       })
+	});
+	
+</script>
+</head>
+<body>
+	<button id='btn1'>이미지 추가</button>
+	<button id='btn2'>img태그 이벤트 해제</button>
+	<br>
+	<div id='ref'>
+	 <img id="img1" src=Penguins.jpg width=150>
+	 <button id='btnClose'> X </button>
+  </div>
+</body>
+</html>

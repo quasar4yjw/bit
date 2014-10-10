@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selector</title>
+
+<script src='jquery-1.11.1.js'></script>
+<script>
+
+/*
+아이디로 태그찾기
+*CSS 셀렉터 문법 : #아이디
+ 
+ */
+
+ 
+ 
+	$(function() {
+		$('h1, p').each(function(index, element){
+			console.log(index, element);
+			
+		});
+	});
+ 
+ 
+  $(function() {
+	    $('<h1>').each(function(e,a){
+	      console.log($('<h1>'));
+	      
+	    });
+	  }); 
+  
+  $(function(){
+	  $('#header4').css('background-color', 'yellow');
+  });
+</script>
+</head>
+<body>
+	<h1 id='header1'>제목11111111111111</h1>
+	<p>내용............1</p>
+
+	<h1 id='header2'>제목111111122222</h1>
+	<p>내용..............</p>
+
+	<h1 id='header3'>제목111111133333333</h1>
+	<p>내용.........3..</p>
+
+	<h1 id='header4'>제목1111144444444444</h1>
+	<p>내용..............</p>
+
+	<h1 id='header5'>제목111111555555555</h1>
+	<p>내용..............</p>
+</body>
+</html>

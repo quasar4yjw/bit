@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selector</title>
+
+<script src='jquery-1.11.1.js'></script>
+<script>
+	/* 
+	태그의 위치로 찾기
+	위치 = odd, even, first, last
+	 */
+	$(function() {
+//문제)홀수 인덱스 tr태그 찾아 배경색 red
+   $('tr:odd').css('background-color', 'lightgray');
+   $('tr:first').css('background-color', 'blue')
+   .css('color', 'white');
+	});
+//문제2) 첫번째 tr태그 배경을 파란색 폰트 흰색 설정
+
+	
+</script>
+</head>
+<body>
+
+	<table border='1'>
+		<tr>
+			<th>번호</th>
+			<th>이름</th>
+			<th>전화</th>
+
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+
+		<tr>
+			<td>9</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+
+		<tr>
+			<td>10</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+
+		<tr>
+			<td>11</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+
+		<tr>
+			<td>12</td>
+			<td>홍길동</td>
+			<td>111-2222</td>
+
+		</tr>
+
+	</table>
+</body>
+</html>

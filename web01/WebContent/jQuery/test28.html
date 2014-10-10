@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>엘리먼트 복제하기</title>
+<style>
+.selected {
+	background-color: blue;
+	color: white;
+}
+
+.head {
+	background-color: black;
+	color: white;
+}
+
+.no {
+	background-color: yellow;
+}
+</style>
+<script src='jquery-1.11.1.js'></script>
+<script>
+// empty() : 콘텐츠 완전 제거
+// $('<h1>'): h1 태그 생성, 끝 태그는 생략해도 된다.
+// $(자식).appendTo(부모) => 부모의 막내 자식으로 추가
+// $(자식).prependTo(부모) => 부모의 첫째 자식으로 추가
+  // $(엘리먼트).insertAfter(형제)
+  //$(부모).append(자식)
+  //$(부모).prepend(자식)
+  
+  
+  
+  
+  // clone() => 선택된 객체 복제한당
+  
+/* 	$(function() {
+		setInterval(function() {
+	 $('img:first').clone().appendTo('body')
+	}, 1000);
+	}); */
+</script>
+</head>
+<body>
+	<img src=Penguins.jpg width=150>
+	<img src=cat01.jpg width=150>
+	<img src=dog01.jpg width=150>
+	<img src=dog02.jpg width=150>
+	<img src=dog03.jpg width=150>
+
+	<h1>0000000000000</h1>
+	<div id='d1'>
+		<h2>aaaaaaaa</h2>
+	</div>
+	<div id='d2'>
+		<h2>bbbbbbbb</h2>
+	</div>
+	
+	
+	<script>
+	// Flip the flipbox from bottom to top
+	$("flipBT").observe('click', function(){
+	  new Flip($("flipBox"), {
+	    direction: 'bt',
+	    color: '#D46419',
+	    content: '<div class="demo-one">Hello!<br/>I\'m a flip-box!<br/> :) </div>'
+	  });
+	});
+
+	// Flip the flipbox from top to bottom
+	$("flipTB").observe('click', function(){
+	  new Flip($("flipBox"), {
+	    direction: 'tb',
+	    color: '#B34212',
+	    startSpeed: 0.6,
+	    endSpeed: 0.4,
+	    content: '<div class="demo-two">Hey!<br/><span style="font-size:14px">You can change me with<br/><code style="font-family:monospace;padding-left:10px">content: $("myId").innerHTML</code></span><br/><br/>Enjoy!</div>'
+	  });
+	});
+
+	// Flip the flipbox from left to right
+	$("flipLR").observe('click', function(){
+	  new Flip($("flipBox"), {
+	    direction: 'lr',
+	    color: '#341405',
+	    content: '<div class="demo-three">I\'m simple html!</div>'
+	  });
+	});
+
+	// Flip the flipbox from right to left
+	$("flipRL").observe('click', function(){
+	  new Flip($("flipBox"), {
+	    direction: 'rl',
+	    startSpeed: 1.0,
+	    endSpeed: 1.0,
+	    color: '#166665',
+	    content: '<div class="demo-four">' + $('logo').up('a').title + '<br/><span style="font-size:11px">This is a taken directly from this page<code style="display:block;color:#fff;padding:5px;font-family:monospace">$("logo").up("a").title</code></span></div>'
+	  });
+	});
+
+	// Example 1
+	$("flipEx1").observe('click', function(){
+	  new Flip($("flipBox"), {
+	    direction: 'tb',
+	    startFx: Effect.Transitions.pulse,
+	    endFx: Prototype.Browser.IE ? Effect.Transitions.linear : Effect.Transitions.spring,
+	    startSpeed: 0.8,
+	    endSpeed: 0.3,
+	    color: '#341405',
+	    content: '<div class="demo-one">Example 1</div>'
+	  });
+	});
+
+	// Example 2
+	$("flipEx2").observe('click', function(){
+	  new Flip($("flipBox"), {
+	    direction: 'bt',
+	    startFx: Effect.Transitions.circIn,
+	    endFx: Effect.Transitions.circOut,
+	    color: '#341405',
+	    content: '<div class="demo-two">Example 2</div>'
+	  });
+	});
+
+	// Example 3
+	$("flipEx2").observe('click', function(){
+	  new Flip($("flipBox"), {
+	    startFx: Effect.Transitions.backIn,
+	    endFx: Effect.Transitions.backOut,
+	    startSpeed: 0.3,
+	    endSpeed: 0.3,
+	    color: '#166665',
+	    content: '<div class="demo-three">Example 3</div>'
+	  });
+	});
+	</script>
+</body>
+</html>

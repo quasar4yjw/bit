@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selector</title>
+
+<script src='jquery-1.11.1.js'></script>
+<script>
+	/* 자식 및 자손 태그 찾기 */
+	$(function() {
+	
+		//$('#main > *').css('color', 'gray');
+		//$('#d1 > h2').css('color', 'red');
+		//$('#d2 > h2').css('background-color', 'lightgray');
+		// color 속성은 자식 태그로 상속된다.
+		// border 속성은 자식 태그로 상속되지 않는다.
+		//$('#main *').css('color', 'royalblue').css('border', '1px solid red');
+		
+	});
+</script>
+</head>
+<body>
+	<div id='main'>
+		<h2>main...h2...1</h2>
+		<h2>main...h2...2</h2>
+		<h2>main...h2...3</h2>
+
+		<div id="d1">
+			<h2>제목11111111111111</h2>
+			<p>내용............1</p>
+
+			<h2 class='blue'>제목111111122222</h2>
+			<p>내용..............</p>
+		</div>
+
+		<div id="d2">
+			<h2 class='blue yellow'>제목111111133333333</h2>
+			<p>내용.........3..</p>
+
+			<h2 class='yellow'>제목1111144444444444</h2>
+			<p>내용..............</p>
+
+			<h2 class='blue'>제목111111555555555</h2>
+			<p>내용..............</p>
+		</div>
+	</div>
+</body>
+</html>
