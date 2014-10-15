@@ -1,0 +1,470 @@
+=======================↓↓↓
+<작성자 : 염정우>
+
+<주관식1>
+ java -cp ./bin:/okok/a:/test/a/b 클래스명 값1 값2 값3 ...(엔터)
+ 값1 값2 값3이 [               ]이다. 
+ 빈칸을 채우시오.
+@@@정답 : 프로그램 아규먼트
+ 
+<주관식2>
+ 문자열을 숫자로 바꾸는 방법
+ String s = "23";
+ int i = [               ](s);
+ 빈칸을 채우시오.
+@@@정답 : Integer.parseInt
+ 
+<주관식3>
+ 사용자로부터 키보드 입력 값을 받는 방법
+ Scanner scan = new Scanner(System.in);
+ String input = [                 ]();
+ 빈칸을 채우시오.
+@@@정답 : scan.nextLine
+ 
+<객관식1>
+switch(값) 값에 올 수 있는 타입을 모두 고르시오. (jdk1.8)
+1. double
+2. byte
+3. float
+4. char
+5. String
+@@@정답 : 2, 4, 5
+
+<객관식2>
+자바에 대해 틀린 말을 모두 고르시오.
+1. void : 함수의 파라미터가 없다
+2. for : Collection 객체를 사용할 수 있다.
+3. 클래스안의 메서드에서 해당 클래스변수를 사용하려면 
+   호출할 때 파라미터값을 반드시 넘겨야 한다.
+4. import 문은 컴파일러가 참조하는 메서드다.
+5. 메서드의 파라미터는 기능을 수행하는 필요한 정보를 전달한다.
+@@@정답 : 1, 3, 4
+
+<객관식3>
+package java01;
+
+public class Test19 {
+  
+  public static void main(String[] args) {
+    byte b = 10;  
+    short s = 10; 
+    char c = '가'; 
+    int i = 10;
+    long l = 10L; 
+    float f = 10.0f; 
+    double d = 10.0; 
+    boolean bool = true;
+    String str = "okok"; 
+    
+    switch(값){
+    default : System.out.println("테스트..."); 
+    }
+     
+  }
+
+}
+값에 넣을 수 있는 것을 모두 고르시오.(jdk1.6)
+1. b
+2. c
+3. str
+4. bool
+5. l
+@@@정답 : 1, 2
+
+<객관식4>
+package java01;
+
+public class Test16 {
+
+  public static void main(String[] args) {
+    int age = Integer.parseInt(args[0]);
+    if (age < 18) {
+      System.out.println("청소년입니다.");
+    } else if (age >= 20 && age < 40) {
+      System.out.println("청년입니다");
+    } else if (age >= 40 && age < 50) {
+      System.out.println("장년입니다.");
+    } else if (age >= 50 && age < 65) {
+      System.out.println("중년입니다.");
+    } else {
+      System.out.println("노인입니다.");
+    }
+  }
+
+}
+다음 중 맞는 말을 모두 고르시오.
+1. args[0] = "76" 일 때, 출력결과 : "노인입니다"
+2. args[0] = "39" 일 때, 출력결과 : "청년입니다"
+3. args[0] = "65" 일 때, 출력결과 : "중년입니다"
+4. args[0] = "19" 일 때, 출력결과 : "노인입니다"
+5. args[0] = "18" 일 때, 출력결과 : "청소년입니다"
+@@@정답:1, 2, 4
+
+<객관식5>
+이클립스 루나버전 자바에디터에서
+public static void main(String[] args) {} 를 입력했을 때
+빨강색으로 나오는 것을 모두 고르시오. 
+1. public
+2. static
+3. void
+4. main
+5. args
+@@@정답 : 1, 2, 3
+
+<객관식6>
+자바에 대해 틀린 말을 모두 고르시오.
+1. 클래스 변수 : JVM이 실행을 종료할 때까지 유지
+2. 로컬변수 : 함수가 호출될 때 준비되는 변수
+3. 인스턴스 변수 : 레퍼런스가 생성될 때 준비되는 변수
+4. 인스턴스 변수 : Stack 영역에 준비됨.
+5. 인스턴스 변수 : 컴퓨터를 종료하기 전까지 메모리에 존재한다.
+@@@정답 : 3, 4, 5
+
+<객관식7>
+자바에 대해 맞는 말을 모두 고르시오.
+1. ArrayList list = new ArrayList(); 에서 변수 list는 배열을 가리킨다.
+2. 클래스 변수 : Heap 영역에 준비된다.
+3. 클래스 변수 : 클래스를 로딩할 때 준비되는 변수다.
+4. 인스턴스 변수 : 가비지 컬렉터에 의해 해제되기 전까지 존재한다.
+5. 로컬변수 : 함수 호출이 끝나면 제거된다.
+@@@정답 : 3, 4, 5
+
+
+
+=======================↓↓↓
+<작성자 : 김해경>
+
+1. 다음중 틀린 것을 고르시오   // 4, 5
+1) 프로그램 아규먼트의 개수는 args.length 로 알 수 있다.
+2) Integer.parseInt() Sting문자열을 int 정수로 꿀 수 있다.
+3) System.out.println()는 문자를 출력할 수 있는 함수이다.
+4) 임의의 값  i % 4 = 0  이면 3의배수가된다.
+5) do while 조건문은  do while(조건); { ... } 이다
+
+2.  JDK 1.7 이하에서도 switch 조건문에 들어가더라도 에러가 나지 않는 것은?  // 1, 2 , 3, 4
+1) short s = 10;
+2) char c = '가';
+3) int i = 10;
+4) long l = 10l;
+5) String str = "okok";
+
+3.   올바른 것을 고르시오.  // 1,  5
+1) if ( a == 0 ) -  a가 0일  때 if문을 수행한다.
+2) if ( a != 0 ) -  a가 0일  때 if문을 수행한다.
+3) if ( a = 0 ) -  a가 0일  때 if문을 수행한다.
+4) if ( a >= 0 ) -  a가 0일  때 if문을 수행한다.
+5) if ( a <= 0 ) -  a가 0 보다 적을때 일  때 if문을 수행한다.
+
+4.  나이(변수 age 가 38살 일 때 "청년입니다."가 출력되는 조건문은?  // 2
+1) if ( age < 18 ) 
+2) if ( age >= 20 && age < 40 ) 
+3) if (age >= 40 && age < 50 ) 
+4) if (age >= 50 && age < 60 ) 
+5) if (age >= 60 && age < 70 ) 
+
+5. 덧셈, 뺄셈, 곱셈, 나눗셈을 위한 함수를 만들려고 한다. 
+다음  중 괄호 안에 들어가야 되는 기호는 무엇인가?   // 1, 2, 3, 4
+static void compute(){
+    switch(op){
+    case "(       )": result = v1 (       )  v2; break;
+    case "(       )": result = v1 (        ) v2; break;
+    case " (      )": result = v1  (       ) v2; break;
+    case "(         )": result = v1 (        ) v2; break;
+     }
+  }
+1) + 
+2) -
+3) * 
+4) /
+5) %
+
+6.  compute 함수는 int v1, int v2, String op 를 아규먼트로 받으며
+파라미터로 int 값을 반환한다. 올바른 함수 작성법은?  // 3
+1)  static int compute(int v1, float v2, String op){ }
+2)  static int compute(int v1, int v2, int op){ }
+3) static int compute(int v1, int v2, String op){ }
+4)  static float compute(int v1, int v2, String op){ }
+5)  static void compute(int v1, int v2, String op){ }
+
+7. 아규먼트 여러개를 출력하기 위한 올바른 코드는?     //4
+for (int i = 0; i < args.length; i++) {
+               ?
+    }
+
+1) System.out.println(arg);
+2) System.out.println(args[x]);
+3)  System.out.println(args);
+4)  System.out.println(args[i]);
+5) System.out.println(args[y]);
+
+8. 다음 빈칸에 들어 갈 단어를 쓰시오  // break
+switch (Integer.parseInt(input)) {
+    case 1 : age = "10"; (    );
+    case 2 : age = "20"; (    );
+    case 3 : age = "30"; (    );
+    case 4 : age = "40"; (    );
+    case 5 : age = "50"; (    );
+    case 6 : age = "기타"; (      );
+
+9. 컴파일러가 참조하는 명령어 
+  (  ?    ) java.util.Scanner
+// import
+
+10. ArrayList 에 객체를 추가하기 위한 명령어는 무엇인가?  // add
+ ArrayList list = new ArrayList();
+list.(       ?         )(100);
+
+
+
+
+
+
+
+
+=======================↓↓↓
+<작성자 : 조민석>
+
+주관식 1. 다른 클래스에서 구현되어 있는 것을 현재 클래스에서 사용하기 위해 그 클래스의 위치와 정보를 알려주는 것을 무엇이라할까요?
+
+답) import
+
+주관식 2. 여러 개의 작업을 하나로 묶어서 관리할 수 있는 작업 덩어리를 무엇이라고 할까요? 자바스크립트에서 'function(함수)'라고합니다.
+
+답) method
+
+주관식 3. 하나의 클래스로부터 생성된 객체들 사이의 통신이나 공통되는 속성을 표현하는데 사용하는 변수를 무엇이라 할까요? 이것은 '전역변수'의 개념을 가졌습니다.
+
+답) 클래스 변수
+
+객관식 1. 
+method를 사용하는 이유는?(메서드의장점) 답)1,2
+  1. 작업을 하나로 묶어서 관리하기 때문에 효율적이고 관리가 편하다
+  2. 언제든 필요하면 반복적으로 호출하여 사용할 수 있다.
+  3. 코드가 길어져서 불편하다.
+  4. 코드의 순서를 바꾸어 프로그램이 꼬일 수도 있다.
+  5. 여러곳에서 호출하면 에러가 난다. 
+
+객관식 2.
+다음중 sum의 출력결과 '45'가 아닌 것은?    답)1 2 3 4
+  1.
+    int i = 1;
+    int sum = 0;
+    while(i<10){
+    sum += i;
+    i++;
+    }
+  2.
+    int sum = 0;
+    for(int i=0;i<10;i++){
+    sum+=i;
+    } 
+  3.
+    int i = 1;
+    int sum = 0;
+    do{
+    sum+=i;
+    i++;
+      }while(i<10);
+  4.
+    int sum = 0;
+    for(int i=9;i>0;){
+    sum+=i;
+    i--;
+    }
+  5.
+    for(int i=0;i<10;i++){
+    sum+=i;
+    i++;
+    }
+
+객관식 3. 다음 중 반복문이 아닌 것을 모두 고르시오? 답) 3, 4
+  1. do-while문
+  2. while문
+  3. switch문
+  4. if문
+  5. for문
+
+객관식 4. 다음 중 조건문이 아닌 것을 모두 고르시오? 답) 3, 4, 5
+  1. if문
+  2. if-else문
+  3. for문
+  4. while문
+  5. do-while문
+
+객관식 5. 다음 보기 안 [   ] 에 한곳이라도 들어갈 수 있는 것을 모두고르시오?    답) 1 2 3
+  보기. 
+public class Test17 {
+  public static void main(String[] args) {
+    [   1   ]{
+      System.out.println("참은 123");
+    } [   2   ]{
+      System.out.println("거짓은 45");
+    } 
+}
+  1. if(조건)
+  2. else
+  3. else if(조건)
+  4. else(조건)
+  5. if else
+
+객관식 6. 다음 보기 안에 [   ] 에 들어갈 수 있는 것을 모두 고르시오.
+  보기.   답) 1 2
+switch(age/10){
+    case 1 : System.out.println("10대.");
+        break;
+              
+    case 2 : System.out.println("20대.");
+        break;
+    case 3 : System.out.println("30대.");
+              break;
+     
+    case 4 :  System.out.println("40대.");
+                break;
+    case 5 : System.out.println("50대.");
+                break;
+    [  ] : System.out.println("기타.");
+          break;                
+    }
+  1. case 6
+  2. default
+  3. safe 6
+  4. break
+  5. return
+
+객관식 7. 다음 출력 되는 값을 모두 고르시오. 답) 1 2
+  보기. 
+java.util.ArrayList list2 = new java.util.ArrayList();
+     list2.add('ㅂ');
+     list2.add('2');
+     
+     for(Object value2 : list2){
+       System.out.println(value2);
+     }
+
+  1. ㅂ
+  2. 2
+  3. e
+  4. E
+  5. ㅇ
+
+
+=======================↓↓↓
+<작성자: 양기욱>
+
+주관식 3/ 객관식 7
+양기욱
+
+1번. 다음 저장장치 중 용량크기순으로 작은 것부터 나열하라
+  L1, L2, L3, RAM, HDD    
+답.  L1<L2<L3<RAM<HDD
+
+2번. 다음을 설명하는 변수를 적어라 (문제2,3번)
+  -함수가 호출될 때 준비되는 변수
+  -Stack 영역어 준비됨.
+  -함수 호출이 끝나면 제거된다.  
+답. 로컬변수
+
+3번. 
+  -인스턴스가 생설될 때 준비되는 변수
+  -Heap 영역에 준비됨.
+  -가비지 컬렉터에 의해 해제되기 전까지 존재한다.
+답. 인스턴스 변수
+
+4번. 다음 중 switch()에 들어 갈수 없는것은?
+  1. byte b = 10;
+  2. long l = 10L;
+  3. double d = 10.0;
+  4. int i = 10;
+  5. char c = '가';
+답. 2,3번
+
+5번. 잘못 짝 지어진 것은?
+  1.public - 어디서든 참조할수 있는 접근제한자
+  2.static - 메모리에 가장 먼저 로딩이 됨
+  3.void - 리턴값을 의미함
+  4.main - 메소드이름으로 자바가 실행되면 가장 먼저 실행되는 메인메소드
+  5.args - 변수의 이름 의미
+답. 5번
+
+6번. 다음 빈칸에 공통으로 들어가야 할 것은?
+switch(op){
+    case "+": result = v1 + v2; (    );
+    case "-": result = v1 - v2; (    );
+    case "*": result = v1 * v2; (    );
+    case "/": result = v1 / v2; (    );
+     }
+    
+ 1. break
+ 2. return
+ 3. op
+ 4. displayResult
+ 5. System
+답 1번
+
+빈칸에 알맞은 것을 넣으시오 
+
+7번
+   (  )(int x=4; x<=100; x+=4){
+     System.(  ).print(x+" ");
+      if(x%20 == 0)
+        System.out.println();  
+      if(x%60 == 0)
+          System.out.print("@");
+1. if , on
+2. for, on
+3. for, out
+4. while, out
+5. switch, on
+답 3번
+
+8번.
+    (   )startMilliSec = System.currentTimeMillis();
+    int x = 1;
+    do {
+      if(x%4 == 0){
+        System.out.print(x+" ");        
+        if(x%20 == 0){
+          System.out.println();  
+          if(x%60 == 0){
+            System.out.print("@");        
+          }
+        }
+      }
+      x++;
+    } while (x <= 210000);
+   (   )endMillisSec = System.currentTimeMillis();
+    System.out.println(endMillisSec - startMilliSec);
+    
+1. float
+2. long
+3. int
+4. char
+5. boolean
+답. 2번
+
+9번.
+  int i = 1;
+    (   )(i <= 20){
+      if(i%3 != 0){
+        System.out.println("i = " + i);
+      }
+      i++;
+    }
+1. switch
+2. if
+3. int
+4. char
+5. while 
+답 .5번
+
+10번. 가비지에 대해 잘못된 것은?
+ 1. idle time 일 때 작동한다
+ 2. 메모리가 부족할 때 작동한다.
+ 3. 가비지가 컬렉터가 관리하는 메모리 영역은 Heap이다
+ 4. 가비지가 생겼다고 가비지 컬렉터가 즉시 동작하는 것은 아니다.
+ 5. 실무에서는 가비지 생성에 상관없이 프로그래밍한다.
+답. 5번
+  
+
+ 
+  
