@@ -19,7 +19,7 @@ public class Test34 {
         
         //상수가 아닌 경우는 값을 l-value에 넣을 수 있다 하더라도
         //허락하지 않는다
-        for (i=0; i<300; i++){
+        for (i=0; i<200; i++){
         byte b3 = (byte)i;
         System.out.println(b3);
         }
@@ -27,3 +27,6 @@ public class Test34 {
   }
 
 }
+
+
+

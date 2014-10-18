@@ -5,7 +5,7 @@ public class TowerHanoi {
     int nDisks = 3;
     doTowers(nDisks, "왼쪽꽂이", "가운데꽂이", "오른쪽꽂이");
   }
-  public static void doTowers(int topN, String from,
+  static void doTowers(int topN, String from,
       String inter, String to) {
     if (topN == 1){
       System.out.println("1번째 작은링이 " +
