@@ -40,11 +40,11 @@ class MyArray2 {
   public int insert(int pos, String value) {
     if(cursor == list.length){
       if(pos >= 0 && pos < this.cursor){
-      list[pos] = value;
-      return 0;
+        list[pos] = value;
+        return 0;
       }
       else{
-      return -1;
+        return -1;
       }
     } else {
       if(pos >= 0 && pos < this.cursor) {
@@ -100,8 +100,8 @@ public class CollectionTest03 {
     }// for
 
 
-    arr.insert(5, "xxxxx6");
-    arr.insert(5, "xxxxx6");
+    arr.insert(1, "xxxxx6");
+   /* arr.insert(5, "xxxxx6");
     arr.insert(5, "xxxxx6");
     arr.insert(5, "xxxxx6");
     arr.insert(5, "xxxxx6");
@@ -109,7 +109,7 @@ public class CollectionTest03 {
     arr.insert(5, "xxxxx6");
     arr.insert(5, "xxxxx6");
     arr.insert(5, "x7777");
-    arr.insert(5, "888");
+    arr.insert(5, "888");*/
     //arr.insert(9, "xxxxx7");
 
 
@@ -121,8 +121,12 @@ public class CollectionTest03 {
     for (int i = 0; i < arr.size(); i++) {
       System.out.println(arr.get(i));
     }// for
-    System.out.println(arr.size());
-    System.out.println(arr.insert(115, "xxxxx7"));
+    /*System.out.println("--------arr.list---");
+    for (Object obj : arr.list){
+      System.out.println(obj);
+    } System.out.println("--------arr.list---");*/
+    /*System.out.println(arr.size());
+    System.out.println(arr.insert(115, "xxxxx7"));*/
 
   }
 
