@@ -38,39 +38,20 @@ class MyArray2 {
   }
 
   public int insert(int pos, String value) {
-    if(cursor == list.length){
-      if(pos >= 0 && pos < this.cursor){
-        list[pos] = value;
-        return 0;
-      }
-      else{
-        return -1;
-      }
-    } else {
-      if(pos >= 0 && pos < this.cursor) {
-
-        for(int i = this.cursor; i >= pos; i--){
-          if(i == pos){
-
-            list[i] = value;
-            this.cursor++;
-          } else{
-            list[i]=list[i-1];  
-          }
-
-        }
-        return 0;
-
-      }else{
-        if(pos < list.length-1 && pos >= this.cursor){
-          list[pos] = value;
-          this.cursor = pos+1;
-          return 0;
-        }else{
-          return -1;
-        }
-      }
-    }
+    if (cursor == list.length) return -1;
+    else if (pos >= 0 && pos < cursor){
+      for(int i = cursor; i >= pos; i--){
+        if(i == pos){
+          list[pos] = value; 
+          cursor++; 
+        } else list[i] = list[i-1];
+      } return 0;
+    } 
+    else if (pos >= cursor && pos < list.length -1){
+      list[pos] = value;
+      cursor = pos + 1;
+      return 0;
+    } else return - 1;
   }
 }
 
@@ -100,7 +81,7 @@ public class CollectionTest03 {
     }// for
 
 
-    arr.insert(1, "xxxxx6");
+    System.out.println(arr.insert(11, "xxxxx6"));
    /* arr.insert(5, "xxxxx6");
     arr.insert(5, "xxxxx6");
     arr.insert(5, "xxxxx6");
@@ -138,6 +119,40 @@ public class CollectionTest03 {
 
 
 
+
+/*if(cursor == list.length){
+  if(pos >= 0 && pos < this.cursor){
+    list[pos] = value;
+    return 0;
+  }
+  else{
+    return -1;
+  }
+} else {
+  if(pos >= 0 && pos < this.cursor) {
+
+    for(int i = this.cursor; i >= pos; i--){
+      if(i == pos){
+
+        list[i] = value;
+        this.cursor++;
+      } else{
+        list[i]=list[i-1];  
+      }
+
+    }
+    return 0;
+
+  }else{
+    if(pos < list.length-1 && pos >= this.cursor){
+      list[pos] = value;
+      this.cursor = pos+1;
+      return 0;
+    }else{
+      return -1;
+    }
+  }
+}*/
 
 
 
