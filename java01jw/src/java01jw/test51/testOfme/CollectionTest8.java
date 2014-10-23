@@ -51,10 +51,12 @@ class MyQueue {
   
   // 첫 번째 입력 값을 꺼낸다. 목록에서 제거됨.
   public Object poll() {
-    
+    if (start != end){
     Object imm = start.value;
     start = start.next;
     return imm;
+    }
+    return null;
 /*  Object imm = start.value;
     end = start.next;
     
