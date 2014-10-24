@@ -1,4 +1,4 @@
-package java01jw.test53.step05;
+package java01jw.test53.step06;
 
 public class EvenIterator extends Iterator{
  // int cursor = 5;

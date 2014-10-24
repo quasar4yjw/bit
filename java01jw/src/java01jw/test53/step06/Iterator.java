@@ -1,4 +1,4 @@
-package java01jw.test53.step05;
+package java01jw.test53.step06;
 
 abstract public class Iterator {
   protected String[] list;
