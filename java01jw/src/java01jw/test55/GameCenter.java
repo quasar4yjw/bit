@@ -3,6 +3,7 @@ package java01jw.test55;
 public class GameCenter {
 
   public static void main(String[] args) throws Exception {
+    System.out.println("good333");
     Gamer gamerA = (Gamer)Class.forName(System.getProperty("a"))
                                   .newInstance();
     Gamer gamerB = (Gamer)Class.forName(System.getProperty("b"))

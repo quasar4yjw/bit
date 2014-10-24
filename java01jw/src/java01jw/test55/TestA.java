@@ -3,11 +3,13 @@ package java01jw.test55;
 public class TestA extends GameCenter implements Gamer  {
   int count;
   int num;
-  
+  /*public static void main(String[] args) {
+    System.out.println("1");
+  }*/
   @Override
   public String who() {
     return "염정우";
-    //gamerB.play();
+    //String ddd = gamerB.play();
   }
 
   @Override
