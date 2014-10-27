@@ -33,7 +33,7 @@ public class Test04 {
       newDir.mkdir();
       out = new FileOutputStream(newFileName);
       
-      int b = 1;
+      int b = -1;
       
       while ((b = in.read()) != -1 ) {
         out.write(b);
