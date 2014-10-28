@@ -40,6 +40,7 @@ public class Test03 {
 
     try{
       int exIndex = args[0].lastIndexOf('/');
+      //System.out.println(exIndex);
       exFileName = args[0].substring(exIndex+1);
 
       if (args[0].contains(".")) {
