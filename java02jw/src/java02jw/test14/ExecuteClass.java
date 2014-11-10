@@ -25,9 +25,9 @@ public class ExecuteClass {
 					"study");
 
 			stmt = con.createStatement();
-			System.out.println("1111111111111111");
+			//System.out.println("1111111111111111");
 			rotate();
-			System.out.println("22222222222222222");
+			//System.out.println("22222222222222222");
 		} catch(Exception ex){}
 		
 		finally{
@@ -38,7 +38,6 @@ public class ExecuteClass {
 			try {con.close();} catch (Exception ex) {}
 		}
 
-		//rotate(list);
 
 	}//main()
 
@@ -48,8 +47,6 @@ public class ExecuteClass {
 
 		try {
 
-			/*stmt.executeUpdate("INSERT INTO PRODUCTS(PNAME,QTY,MKNO)" +
-          " VALUES('넥서스10', 99, 6)");*/
 
 			rs = stmt.executeQuery("SELECT T1.PNO, T1.PNAME, T1.QTY, T2.MKNAME" + 
 					" FROM PRODUCTS T1 LEFT OUTER JOIN MAKERS T2 ON T1.MKNO=T2.MKNO");
@@ -59,7 +56,6 @@ public class ExecuteClass {
 					"수량",
 					"제품명");
 			while (rs.next()) {
-				// 결과를 가져왔다면 데이터는 ResultSet 객체에 들어 있다.
 				System.out.printf("%-5d %-20s %7d %-10s\n" , 
 						rs.getInt("PNO"), 
 						rs.getString("PNAME"),
@@ -150,8 +146,6 @@ public class ExecuteClass {
 	public static void doDelete(int i){
 		try {
 			String PNAME = "";
-			/*stmt.executeUpdate("INSERT INTO PRODUCTS(PNAME,QTY,MKNO)" +
-          " VALUES('넥서스10', 99, 6)");*/
 			rs = stmt.executeQuery("SELECT T1.PNAME" + 
 					" FROM PRODUCTS T1 WHERE T1.PNO="+i);
 
@@ -159,8 +153,6 @@ public class ExecuteClass {
 				PNAME = rs.getString("PNAME");
 			}
 
-			//System.out.print(PNAME + "를 삭제하시겠습니까?(y/n) ");
-			//PNAME = scanner.nextLine();
 			System.out.print(PNAME + "를 삭제하시겠습니까?(y/n) ");
 			if (scanner.nextLine().equalsIgnoreCase("y")){
 
