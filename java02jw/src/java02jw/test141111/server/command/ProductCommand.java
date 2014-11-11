@@ -72,24 +72,24 @@ public class ProductCommand {
 		@SuppressWarnings("unchecked")
 		ArrayList<String> options = 
 		(ArrayList<String>)params.get("options");
-
+		PrintStream out = (PrintStream)params.get("out");
 		HashMap<String,String> valueMap = 
 				parseQueryString(options.get(0));
 		int no =Integer.parseInt(valueMap.get("no"));
 
 		Product product = productDao.selectOne(no);
 		if (product == null) {
-			System.out.println("해당 번호의 제품 정보를 찾을 수 없습니다.");
+			out.println("해당 번호의 제품 정보를 찾을 수 없습니다.");
 			return;
 		}
 
-		System.out.print(product.getName() + "을 삭제하시겠습니까?(y/n)");
-		if (scanner.nextLine().equalsIgnoreCase("y")) {
+		//out.print(product.getName() + "을 삭제하시겠습니까?(y/n)");
+	//	if (scanner.nextLine().equalsIgnoreCase("y")) {
 			productDao.delete(no);
-			System.out.println("삭제하였습니다.");
-		} else {
-			System.out.println("삭제 취소하였습니다.");
-		}
+			out.println("삭제하였습니다.");
+	//	} else {
+	//		out.println("삭제 취소하였습니다.");
+	//	}
 	}
 
 	@Command("list")

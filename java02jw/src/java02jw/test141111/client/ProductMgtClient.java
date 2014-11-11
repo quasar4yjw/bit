@@ -37,7 +37,7 @@ public class ProductMgtClient {
           System.out.println(message);
         }
       } catch (Exception ex) {
-        System.out.println("명령어 실행 중 오류 발생!");
+//        System.out.println("명령어 실행 중 오류 발생!");
         
       } finally {
         try {in.close();} catch (Exception e) {}
@@ -51,7 +51,15 @@ public class ProductMgtClient {
 
 }
 
+/*list
+list?pageNo=2&pageSize=5
+list?pageNo=3
 
+add?name=O&qty=O&mkno=O
+delete?no=O
+update?no=O&name=O&qty=O&mkno=O
+view?no=O
+*/
 
 
 
