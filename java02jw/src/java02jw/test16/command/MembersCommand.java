@@ -24,22 +24,48 @@ public class MembersCommand {
   @Command("add")
   public void add(Map<String, Object> params) {
     Members members = new Members();
+    String text = null;
+    
     System.out.print("아이디:");
-    members.setId(scanner.nextLine());
+    text = scanner.nextLine();
+    if (text.length() > 0)
+    members.setId(text);
+    
     System.out.print("비밀번호:");
-    members.setPwd(scanner.nextLine());
+    text = scanner.nextLine();
+    if (text.length() > 0)
+    members.setPwd(text);
+    
     System.out.print("이메일:");
-    members.setEmail(scanner.nextLine());
+    text = scanner.nextLine();
+    if (text.length() > 0)
+    members.setEmail(text);
+    
     System.out.print("주문자명:");
-    members.setName(scanner.nextLine());
+    text = scanner.nextLine();
+    if (text.length() > 0)
+    members.setName(text);
+    
     System.out.print("전화:");
-    members.setTel(scanner.nextLine());
+    text = scanner.nextLine();
+    if (text.length() > 0)
+    members.setTel(text);
+    
     System.out.print("팩스:");
-    members.setFax(scanner.nextLine());
+    text = scanner.nextLine();
+    if (text.length() > 0)
+    members.setFax(text);
+    
     System.out.print("상세주소:");
-    members.setAddr(scanner.nextLine());
+    text = scanner.nextLine();
+    if (text.length() > 0)
+    members.setAddr(text);
+    
     System.out.print("주문자사진:");
-    members.setPhot(scanner.nextLine());
+    text = scanner.nextLine();
+    if (text.length() > 0)
+    members.setPhot(text);
+    
     System.out.print("주소번호:");
     try{
     members.setAno(Integer.parseInt(scanner.nextLine()));

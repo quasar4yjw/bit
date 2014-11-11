@@ -21,14 +21,14 @@ import java.io.Serializable;
 public class Members implements Serializable, Cloneable {
   private static final long serialVersionUID = 1L;
   
-  protected String    id;
-  protected String    pwd;
-  protected String    email;
-  protected String    name;
-  protected String    tel;
-  protected String    fax;
-  protected String    addr;
-  protected String    phot;
+  protected String    id = "NULL";
+  protected String    pwd = "NULL";
+  protected String    email = "NULL";
+  protected String    name = "NULL";
+  protected String    tel = "NULL";
+  protected String    fax = "NULL";
+  protected String    addr = "NULL";
+  protected String    phot = "NULL";
   protected int    ano;
   public Members() {}
 

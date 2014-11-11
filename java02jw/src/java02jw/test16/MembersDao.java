@@ -71,7 +71,7 @@ public class MembersDao {
         + "', FAX='" + members.getFax()
         + "', DET_ADDR='" + members.getAddr()
         + "', PHOT='" + members.getPhot() + "'"
-        + " WHERE UID=" + members.getId());
+        + " WHERE UID='" + members.getId()+ "'");
       
     } catch (Exception ex) {
       throw new RuntimeException(ex);
