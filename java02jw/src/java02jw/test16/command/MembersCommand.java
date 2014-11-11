@@ -161,6 +161,10 @@ public class MembersCommand {
     text = scanner.nextLine();
     if (text.length() > 0)
       tempMembers.setPhot(text);
+    System.out.printf("주소번호(%s):", members.getAno());
+    text = scanner.nextLine();
+    if (text.length() > 0)
+      tempMembers.setAno(Integer.parseInt(text));
     
     System.out.print("정말 변경하시겠습니까?(y/n)");
     if (scanner.nextLine().equalsIgnoreCase("y")) {
@@ -193,7 +197,7 @@ public class MembersCommand {
     System.out.println("팩스: " + members.getFax());
     System.out.println("상세주소: " + members.getAddr());
     System.out.println("주문자사진: " + members.getPhot());
-    System.out.println("주소번호: " + members.getAddr());
+    System.out.println("주소번호: " + members.getAno());
   }
 }
 

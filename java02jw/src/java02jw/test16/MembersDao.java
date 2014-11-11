@@ -70,7 +70,8 @@ public class MembersDao {
         + "', TEL='" + members.getTel()
         + "', FAX='" + members.getFax()
         + "', DET_ADDR='" + members.getAddr()
-        + "', PHOT='" + members.getPhot() + "'"
+        + "', PHOT='" + members.getPhot()
+        + "', ANO='" + members.getAno() + "'"
         + " WHERE UID='" + members.getId()+ "'");
       
     } catch (Exception ex) {
